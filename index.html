@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Чат</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="wrap">
+    <div class="popap is-active">
+        <div class="reg">
+            <div class="reg__img-wrap">
+                <img src="img/template.png" alt="" class="img">
+            </div>
+            <div class="reg__title">Авторизация</div>
+            <div class="reg__text">Введите пожалуйста своё фото и ник для дальнейшей авторизации</div>
+            <form class="reg__form">
+                <div class="reg__item">
+                    <input type="text" id="regName" class="reg__from-input" placeholder="Введите свое имя" required>
+                </div>
+                <div class="reg__item">
+                    <input type="text" id="regLogin" class="reg__from-input" placeholder="Введите свой ник" required>
+                </div>
+                <input  type="submit" class="reg-btn" value="Войти" />
+            </form>
+        </div>
+    </div>
+    <div class="popap-img">
+        <form method="post" enctype="multipart/form-data" class="load-img-form">
+            <div class="load">
+                <label class="label-img-upload" for="image_uploads">Выберите изображение</label>
+                <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+            </div>
+            <div class="preview">
+                <div class="current-user-preview-img" style="display: none"></div>
+                <p>No files currently selected for upload</p>
+            </div>
+            <div class="load-img-form-btns">
+                <button class="cancel">Отмена</button>
+                <button class="save">Сохранить</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="chat">
+        <div class="chat__list">
+            <div class="current-user">
+                <div class="current-user-img">
+                    <img src="img/camera.png" alt="" class="current-user-pick" alt="foto">
+                </div>
+                <div class="current-user-info">
+                    <div class="current-user-name">Тест</div>
+                    <!--<div class="current-user-nick">test</div>-->
+                </div>
+            </div>
+            <div class="other-users">
+                <div class="other-users-title">Пользователи :</div>
+            </div>
+        </div>
+        <div class="chat__message">
+            <div class="chat__message-header">
+                <div class="chat__message-title">Чат</div>
+                <div class="chat__message-user-count">
+                    Участников он-лайн
+                    <span class="chat__message-user-count user_count"></span>
+                </div>
+            </div>
+            <div class="chat__message-aria"></div>
+            <div class="chat__message-bottom">
+                <form class="chat__message-form">
+                    <input type="text" id="msg" class="chat-msg" placeholder="Введите сообщение ... ">
+                    <input  type="submit" class="chat__message-btn" value="Отправить" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/index.js" ></script>
+</body>
+</html>
